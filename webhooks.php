@@ -25,21 +25,21 @@ if (!is_null($events['events'])) {
 				'text' => $text
 			];
 			}elseif($event['message']['text'] == 'ขอไทยเที่ยง'){
-			  $text = 'หวยหุ้นไทยเช้า 89 80 81 90 91 01';
+			  $text = 'หวยหุ้นไทยเที่ยง 89 80 81 90 91 01';
 			  $replyToken = $event['replyToken'];
 			  $messages = [
 				'type' => 'text',
 				'text' => $text
 			];
 			}elseif($event['message']['text'] == 'ขอไทยบ่าย'){
-			  $text = 'หวยหุ้นไทยเช้า 34 35 36 45 46 56';
+			  $text = 'หวยหุ้นไทยบ่าย 34 35 36 45 46 56';
 			  $replyToken = $event['replyToken'];
 			  $messages = [
 				'type' => 'text',
 				'text' => $text
 			];
 			}elseif($event['message']['text'] == 'ขอไทยเย็น'){
-			  $text = 'หวยหุ้นไทยเช้า 90 96 93 91 92 98';
+			  $text = 'หวยหุ้นไทยเย็น 90 96 93 91 92 98';
 			  $replyToken = $event['replyToken'];
 			  $messages = [
 				'type' => 'text',
