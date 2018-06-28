@@ -44,7 +44,8 @@ if (!is_null($events['events'])) {
 			$result = curl_exec($ch);
 			curl_close($ch);
 
-			echo $result . "\r\n";
+			//echo $result . "\r\n";
+			echo "หวยหุ้นไทยเช้า 12 13 14 23 24 34" . "\r\n";
 		}
 	}
 }
