@@ -16,16 +16,48 @@ if (!is_null($events['events'])) {
 		// Reply only when message sent is in 'text' format
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			// Get text sent
-			//$text = $event['source']['userId'];
-			$text = 'หวยหุ้นไทยเช้า 12 13 14 23 24 34';
-			// Get replyToken
-			$replyToken = $event['replyToken'];
-
-			// Build message to reply back
-			$messages = [
+			
+			if($event['message']['text'] == 'ขอไทยเช้า'){
+			  $text = 'หวยหุ้นไทยเช้า 12 13 14 23 24 34';
+			  $replyToken = $event['replyToken'];
+			  $messages = [
 				'type' => 'text',
 				'text' => $text
 			];
+			}elseif($event['message']['text'] == 'ขอไทยเที่ยง'){
+			  $text = 'หวยหุ้นไทยเช้า 89 80 81 90 91 01';
+			  $replyToken = $event['replyToken'];
+			  $messages = [
+				'type' => 'text',
+				'text' => $text
+			];
+			}elseif($event['message']['text'] == 'ขอไทยบ่าย'){
+			  $text = 'หวยหุ้นไทยเช้า 34 35 36 45 46 56';
+			  $replyToken = $event['replyToken'];
+			  $messages = [
+				'type' => 'text',
+				'text' => $text
+			];
+			}elseif($event['message']['text'] == 'ขอไทยเย็น'){
+			  $text = 'หวยหุ้นไทยเช้า 90 96 93 91 92 98';
+			  $replyToken = $event['replyToken'];
+			  $messages = [
+				'type' => 'text',
+				'text' => $text
+			];
+			}
+			
+			
+			//$text = $event['source']['userId'];
+			//$text = 'หวยหุ้นไทยเช้า 12 13 14 23 24 34';
+			// Get replyToken
+			//$replyToken = $event['replyToken'];
+
+			// Build message to reply back
+			//$messages = [
+			//	'type' => 'text',
+			//	'text' => $text
+			//];
 
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
